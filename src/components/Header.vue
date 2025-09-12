@@ -19,6 +19,11 @@
           <li class="nav-item">
             <router-link to="/contacto" class="nav-link">Contacto</router-link>
           </li>
+              <div class="d-flex align-items-center gap-2 ms-auto">
+        <span v-if="state.user">Hola, {{ state.user.name || state.user.email }}</span>
+        <a v-if="!state.user" class="btn btn-outline-primary btn-sm" href="#" @click.prevent="go('login')">Iniciar sesión</a>
+        <button v-else class="btn btn-outline-secondary btn-sm" @click="logout">Cerrar sesión</button>
+      </div>
         </ul>
         <button id="darkModeToggle" class="btn btn-sm btn-outline-secondary ms-2">
           🌙
@@ -33,4 +38,6 @@
 
 <script setup>
 import { RouterLink } from 'vue-router'
+import { state, actions } from '../state'
+
 </script>
