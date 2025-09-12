@@ -19,6 +19,9 @@
           <li class="nav-item">
             <router-link to="/contacto" class="nav-link">Contacto</router-link>
           </li>
+            <li class="nav-item">
+          <router-link to="/cart" class="nav-link" href="#" @click.prevent="go('cart')">Carrito ({{ cartCount }})</router-link>
+        </li>
               <div class="d-flex align-items-center gap-2 ms-auto">
         <span v-if="state.user">Hola, {{ state.user.name || state.user.email }}</span>
         <a v-if="!state.user" class="btn btn-outline-primary btn-sm" href="#" @click.prevent="go('login')">Iniciar sesión</a>
