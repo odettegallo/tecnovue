@@ -11,7 +11,7 @@
             <router-link to="/" class="nav-link">Inicio</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/productos" class="nav-link">Productos</router-link>
+            <router-link to="/productos" class="nav-link">Home</router-link>
           </li>
            <li class="nav-item">
             <router-link to="/inventario" class="nav-link">Inventario</router-link>
